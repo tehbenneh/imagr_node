@@ -1,0 +1,5 @@
+#!/bin/bash
+/usr/bin/mkdir -p /storage/Services ;
+/usr/bin/mfsmount /mnt/MFS -H mfs.barton.ac.uk -o allow_other -o ro ;
+/usr/bin/rsync -ravh --progress /mnt/MFS/Services/imagr /Storage/Services/ ;
+/usr/sbin/service nginx start ;
